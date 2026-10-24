@@ -1,0 +1,19 @@
+services:
+  neetcode-api-db:
+    image: postgres:16-alpine
+    container_name: neetcode-api-db
+    restart: unless-stopped
+
+    environment:
+      POSTGRES_DB: neetcode
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    
+    ports:
+      - "5433:5432"
+
+    volumes:
+      - neetcode_data:/var/lib/postgresql/data
+
+volumes:
+  neetcode_data:
