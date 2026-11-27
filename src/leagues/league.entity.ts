@@ -1,5 +1,4 @@
 import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn } from "typeorm";
-import { User } from "../users/user.entity";
 
 @Entity('leagues')
 export class League {

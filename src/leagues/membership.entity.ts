@@ -4,7 +4,7 @@ import { League } from "./league.entity";
 
 export enum MemberRole { OWNER = 'OWNER', MEMBER = 'MEMBER'}
 
-@Entity('Memberships')
+@Entity('memberships')
 @Unique(['user', 'league'])
 export class Membership {
     @PrimaryGeneratedColumn('uuid') id: string;
