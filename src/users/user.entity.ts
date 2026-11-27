@@ -6,6 +6,7 @@ export class User {
     @Column() username: string;
     @Column({ unique: true }) email: string;
     @Column({ select: false }) passwordHash: string;
+    @Column({ type: 'varchar', nullable: true, select: false}) refreshTokenHash: string | null;
     @Column({ type: 'varchar', nullable: true, unique: true}) leetcodeUsername: string | null;
     @CreateDateColumn() createdAt: Date;
 }
